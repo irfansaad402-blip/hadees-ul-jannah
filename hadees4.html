@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <!-- style.css-->
+     <link rel="stylesheet" href="style.css">
+<!-- bootsarp 5  -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- style.css-->
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+  <div class=" container py-5">
+
+        <h1 class=" text-center">حديث الجنة </h1>
+        </div>
+    </header>
+ <div class="container py-5 button">
+  <button class="btn btn-warning" onclick="show('item10')">حدیث نمبر دس</button>
+  <button class="btn btn-warning" onclick="show('item9')">حدیث نمبر نو</button>
+  <button class="btn btn-warning" onclick="show('item8')">حدیث نمبر آٹھ</button>
+  <button class="btn btn-warning" onclick="show('item7')">حدیث نمبر سات</button>
+  <button class="btn btn-warning" onclick="show('item6')">حدیث نمبر چھ</button>
+  <button class="btn btn-warning" onclick="show('item5')">حدیث نمبر پانچ</button>
+  <button class="btn btn-warning" onclick="show('item4')">حدیث نمبر چار</button>
+  <button class="btn btn-warning" onclick="show('item3')">حدیث نمبر تین</button>
+  <button class="btn btn-warning" onclick="show('item2')">حدیث نمبر دو</button>
+  <button class="btn btn-warning" onclick="show('item1')">حدیث نمبر ایک</button>
+</div>
+
+
+
+<div class="slider container text-center">
+   <div class="slide" id="item1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, praesentium.</div>
+   <div class="slide" id="item2">esentium.</div>
+   <div class="slide" id="item3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, praesentium.</div>
+   <div class="slide" id="item4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, praesentium.</div>
+   <div class="slide" id="item5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, praesentium.</div>
+   <div class="slide" id="item6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, praesentium.</div>
+   <div class="slide" id="item7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, praesentium.</div>
+   <div class="slide" id="item8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, praesentium.</div>
+   <div class="slide" id="item9">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, praesentium.</div>
+   <div class="slide" id="item10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, praesentium.</div>
+
+</div><script>
+let currentOpen = "item1"; // page load par open
+
+function show(id) {
+  let slides = document.querySelectorAll(".slide");
+
+  // agar same button dobara click hua → hide
+  if (currentOpen === id) {
+    document.getElementById(id).style.display = "none";
+    currentOpen = null;
+    return;
+  }
+
+  // baqi sab hide
+  slides.forEach(slide => {
+    slide.style.display = "none";
+  });
+
+  // clicked wala show
+  document.getElementById(id).style.display = "block";
+  currentOpen = id;
+}
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
