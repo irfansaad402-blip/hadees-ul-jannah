@@ -4,10 +4,14 @@ body{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     
 }
+body,html{
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
 
 header{
     background-color:   black;
-    color:  goldenrod;
+color: goldenrod;
 }
 i{
   
@@ -36,33 +40,14 @@ a{
     transition: transform 0.2s;
     
 }
-.button
-{
+
+    
+.class1{
     display: flex;
-    flex-wrap: nowrap;
-    -webkit-overflow-scrolling: touch;
-    overflow-x: auto;
-    gap: 10px;
-padding: 10px 0px;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
 
 }
-.button   .btn{
-    flex-shrink: 0;
-    white-space: nowrap;
-}
-.button::-webkit-scrollbar{
-    display: none;
-    
-}
-   
-.slide{
-  display: none;
-}
-
-.slide:first-child{
-  display: block;
-}
-
-
-    
-
